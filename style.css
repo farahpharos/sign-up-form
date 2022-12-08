@@ -1,52 +1,103 @@
-
-
+@font-face {
+    font-family: Norse;
+    src: url(Norse-Bold.otf);
+}
+h5 {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-block-end: 10px;
+}
 .row {
-    display: flex;
+    display: grid;
     height: 100vh;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr);
   }
   
   .left {
-    width: 25%;
-    float: left;
     background-image: url("fantasy.jpeg");
   }
   
   .right {
-   background-color: blue;
-   float: right;
-   width: 75%;
+  
    display: grid;
-   grid-auto-rows: 1fr;
+   grid-column: 2/4;
   }
-    #fantasy{
-    height: 100vh;
-    width: 100vw;
-    object-fit: fill;
+
+  *.right > div {
+    display: grid;
+    padding-left: 30px;
   }
-  /*.right > div {
-    background-color: blue;
-  }*/
   
   .top_right {
-    background-color: #F4F4F4;
+    background-color: rgb(240, 240, 240);
+    display: grid;;
   }
   .middle_right {
     background-color: white;
+    padding: 15px;
   }
-  .bottom_right {
-    background-color: #F4F4F4;
-  }
+form {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    grid-template-rows: auto;
+    row-gap: 15px;
+    column-gap: 15px;
+}
 
-  #fantasy{
-    height: 100vh;
-    width: 100vw;
-    object-fit: contain;
+#first_name {
+    grid-row: 1;
+}
+#last_name {
+    grid-row: 1;
+}
+  .bottom_right {
+    background-color:rgb(224, 224, 224);
   }
   #odin {
-    margin-top: 30%;
-    background-color:rgb(43,43,43);opacity:0.6;;
-
-    background-blend-mode: color;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-top: 25vh;
+    background-color:rgba(43,43,43,0.6);
+    padding-top: 3%;
+    padding-bottom: 3%;
+    font-family: Norse;
+    color: white;
+    text-align: center;
+    font-size: 4rem;
   }
+
+  #odin_text {
+    font-family: Norse;
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  #pitch {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  button {
+    height: 35px;
+    width: 150px;
+    border-radius: 7.5px;
+    margin-top: 30px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(41, 66, 3, 0.664);
+  }
+
+  #login{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgba(41, 66, 3, 0.664);
+    font-weight: 600;
+  }
+
+p {
+    font-size: small;
+}
