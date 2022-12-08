@@ -1,4 +1,52 @@
-.id {
-    background-color: aquamarine;
+
+
+.row {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left {
     width: 25%;
-}
+    float: left;
+    background-image: url("fantasy.jpeg");
+  }
+  
+  .right {
+   background-color: blue;
+   float: right;
+   width: 75%;
+   display: grid;
+   grid-auto-rows: 1fr;
+  }
+    #fantasy{
+    height: 100vh;
+    width: 100vw;
+    object-fit: fill;
+  }
+  /*.right > div {
+    background-color: blue;
+  }*/
+  
+  .top_right {
+    background-color: #F4F4F4;
+  }
+  .middle_right {
+    background-color: white;
+  }
+  .bottom_right {
+    background-color: #F4F4F4;
+  }
+
+  #fantasy{
+    height: 100vh;
+    width: 100vw;
+    object-fit: contain;
+  }
+  #odin {
+    margin-top: 30%;
+    background-color:rgb(43,43,43);opacity:0.6;;
+
+    background-blend-mode: color;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }

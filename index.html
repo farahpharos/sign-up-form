@@ -1,33 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="style.css" rel = "stylesheet"/>
+</head>
+<body>
+  <body>
+   <div class = "row">
+    <div class="left">
+        <div id = "odin">ODIN</div>
+    </div>
+    <div class="right">
+      <div class = "top_right"></div>
+      <div class = "middle_right">
+                <form action = "http://httpbin.org/post" method = "post">
+            
+                
+                <div>
+                  <legend>first name</legend>
+               <input type = "text" id = "first_name" name = "first_name" 
+                    placeholder = "first name" required>
+               <label for = "first_name"></label>    
+                  </div>
+              <div>
+                <legend>last name</legend>
+               <input type = "text" id = "last_name" name = "last_name" 
+                    placeholder = "last name" required>
+               <label for = "last_name"></label>   
+                </div>
+            
+         
+                
+                <div>
+                  
+               <input type = "email" id = "email" name = "email"                              placeholder ="example@email.com" required>
+               <label for = "email"></label>     
+               <input type = "text" id = "phone_number" name =                                "phone_number" placeholder="04" required>
+               <label for = "phone_number"></label>   
+                </div>
 
+     
+                <div>
+               <input type = "text" id = "password" name = "password"                       required
+                    placeholder="password">
+               <label for = "password"></label>     
+               <input type = "text" id = "confirm_password" name =                            "confirm_password" 
+                    placeholder = "confirm password"required>
+               <label for = "confirm_password"></label>   
+                </div>
 
-.row {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .left {
-    width: 25%;
-  
-    float: left;
-  }
-  
-  .right {
-   background-color: blue;
-   float: right;
-   width: 75%;
-   display: grid;
-  }
-  
-  /*.right > div {
-    background-color: blue;
-  }*/
-  
-  .top_right {
-    background-color: #F4F4F4;
-  }
-  .middle_right {
-    background-color: white;
-  }
-  .bottom_right {
-    background-color: #F4F4F4;
-  }
+        </form>
+      </div>
+      <div class = "bottom_right"></div>
+    </div>
+</body>
+</html>
