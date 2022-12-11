@@ -12,7 +12,8 @@
    <div class = "row">
     <div class="left">
         <div id = "odin">
-            ODIN
+           <img src="odin-lined.png"  id="icon"> 
+           <span id="logo_text">ODIN</span>
         </div>
     </div>
     <div class="right">
@@ -30,38 +31,46 @@
                 <form action = "http://httpbin.org/post" method = "post">
             
                 
-                <div>
-               <input type = "text" id = "first_name" name = "first_name" 
-                    placeholder = "first name" required>
-               <label for = "first_name"></label>    
+                <div class = "boxes">
+                   <label for = "first_name">First Name<br></label>  
+                   <input type = "text" id = "first_name" name = "first_name" 
+                     placeholder = "first name" required>
+                 
                 </div>
-                <div>
-               <input type = "text" id = "last_name" name = "last_name" 
+                <div class = "boxes">
+                   <label for = "last_name">Last Name<br></label>   
+                   <input type = "text" id = "last_name" name = "last_name" 
                     placeholder = "last name" required>
-               <label for = "last_name"></label>   
+               
                 </div>
             
-         
+       
                 
-                <div>
-               <input type = "email" id = "email" name = "email"                              placeholder ="example@email.com" required>
-               <label for = "email"></label>  
+                <div class = "boxes">
+                  <label for = "email">email<br></label>  
+                  <input type = "email" id = "email" name = "email"                              
+                  placeholder ="example@email.com" required>
+                  
                </div>
-               <div>  
-               <input type = "text" id = "phone_number" name =                                "phone_number" placeholder="04" required>
-               <label for = "phone_number"></label>   
+               <div class = "boxes">  
+                   <label for = "phone_number">phone number<br></label>
+                   <input type = "text" id = "phone_number" name =                                
+                   "phone_number" placeholder="04" required>                    
                 </div>
 
-     
-                <div>
-               <input type = "text" id = "password" name = "password"                       required
-                    placeholder="password">
-               <label for = "password"></label>   
+    
+                <div class = "boxes">
+                   <label for = "password">password<br></label>
+                   <input type = "text" id = "password" name = "password"                       
+                  required placeholder="password">
+                  
                </div>
-               <div>  
-               <input type = "text" id = "confirm_password" name =                            "confirm_password" 
+               <div class = "boxes">  
+                  <label for = "confirm_password">confirm password<br></label> 
+                  <input type = "text" id = "confirm_password" name =                            
+                  "confirm_password" 
                     placeholder = "confirm password"required>
-               <label for = "confirm_password"></label>   
+                 
                 </div>
 
         

@@ -2,102 +2,223 @@
     font-family: Norse;
     src: url(Norse-Bold.otf);
 }
+
 h5 {
     font-weight: 600;
     margin-top: 10px;
     margin-block-end: 10px;
 }
-.row {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr);
-  }
-  
-  .left {
-    background-image: url("fantasy.jpeg");
-  }
-  
-  .right {
-  
-   display: grid;
-   grid-column: 2/4;
-  }
 
-  *.right > div {
+.row {
+
     display: grid;
-    padding-left: 30px;
+    grid-template-areas: 
+    'logo right right'
+    'logo right right'
+    'logo right right';
   }
   
-  .top_right {
+.left {
+  width: 40vw;
+  grid-area: logo;
+  background-image: url("fantasy.jpeg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat; 
+  }
+.right {
+  width: 60vw;
+  grid-area: right;
+  display: grid;
+  grid-template-areas: 
+  'pitch pitch'
+  'form form'
+  'create create'
+  ;
+}
+.right > div {
+padding-left: 20px;
+}
+.top_right {
+
+    grid-area: pitch;
     background-color: rgb(240, 240, 240);
-    display: grid;;
   }
-  .middle_right {
-    background-color: white;
-    padding: 15px;
+.middle_right {
+
+    grid-area: form;
+    background-color: rgb(224, 224, 224);
   }
+.bottom_right {
+
+    grid-area: create;
+    background-color:rgb(224, 224, 224);
+  }
+  
+
+
 form {
-    display: grid;
-    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
-    grid-template-rows: auto;
-    row-gap: 15px;
-    column-gap: 15px;
+  display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+  
+}
+  
+
+
+.boxes {
+  padding-top: 2vh;
+
+}
+input {
+  display: flex;
+  flex-flow: column wrap;
+  width: 40%;
+}
+
+ label {
+  text-transform: uppercase;
+  font-size: 0.6rem;
 }
 
 #first_name {
-    grid-row: 1;
+
 }
 #last_name {
-    grid-row: 1;
+
 }
-  .bottom_right {
-    background-color:rgb(224, 224, 224);
-  }
-  #odin {
-    margin-top: 25vh;
-    background-color:rgba(43,43,43,0.6);
-    padding-top: 3%;
-    padding-bottom: 3%;
-    font-family: Norse;
-    color: white;
-    text-align: center;
-    font-size: 4rem;
-  }
+#email {
+  
+}
+#phone_number {
+ 
+}
+#password {
+ 
+}
+#confirm_password {
+  
+}
 
-  #odin_text {
-    font-family: Norse;
-    color: white;
-    text-align: center;
-    font-size: 4rem;
-  }
+#odin {
+  height: auto;
+  background-color:rgba(43,43,43,0.6);
+  position: relative;
+  top: 20vh;
+  gap: 1vh;
+  padding: 15px 0;
+  justify-content: center;
+  align-items: center;
+}
 
-  #pitch {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-top: 60px;
-    margin-bottom: 40px;
-  }
+#icon {
+  height: 10vh;
+  
+}
+#logo_text {
+  font-family: Norse;
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+}
+#odin_text {
+  font-family: Norse;
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+}
 
-  button {
-    height: 35px;
-    width: 150px;
-    border-radius: 7.5px;
-    margin-top: 30px;
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: bold;
-    color: white;
-    background-color: rgba(41, 66, 3, 0.664);
-  }
+#pitch {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  /*margin-top: 60px;
+  margin-bottom: 40px;*/
+}
 
-  #login{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgba(41, 66, 3, 0.664);
-    font-weight: 600;
-  }
+button {
+  height: 35px;
+  width: 150px;
+  border-radius: 7.5px;
+  margin-top: 30px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(41, 66, 3, 0.664);
+}
+
+#login{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(41, 66, 3, 0.664);
+  font-weight: 600;
+}
 
 p {
     font-size: small;
+}
+
+@media only screen and (max-width: 600px)  {
+  .content{
+      flex-flow: column;
+      height: auto;
+      text-align: center;
+  }
+  .picture{
+      width: 100vw;
+      height: 15vh;
+      display: flex;
+      background-size: 100vw;
+  }
+  .logo{
+      width: 100vw;
+      position: static;
+      gap: 10px;
+  }
+  .right{
+      width: auto;
+      height: auto;
+  }
+  .dummy-text{
+      width: auto;
+      margin-top: 30px;
+
+  }
+  .left{
+      padding: 10px 20px;
+  }
+  .remote-text{
+      padding: 20px 0;
+      margin: 0;
+  }
+  .form{
+      flex-flow: column nowrap;
+      align-items: center;
+
+  }
+  .input{
+      text-align: left;
+      width: auto;
+      font-size: 0.9em;
+      justify-content: center;
+      align-items: center;
+  }
+  input{
+      font-size: 0.9rem;
+      height: 1.5rem;
+      width: 70vw;
+  }
+  .button,
+  .log-in{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0px;
+  }
+  button{
+      margin-bottom: 0px;
+      width: 60vw;
+      padding: 10px 5px;
+  }
+
 }
